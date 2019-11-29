@@ -5,71 +5,317 @@ body
     background: #ECEEF1;
 }
 
-
-#nav-bar
-{
-
-    align-content: flex-end;
-    align-items: flex-end;
-    float: right;
-}
-
-.icons
-{
-    width: 20px;
-}
-
-
-#fieldset1
-{
-    background: white;
-    border-radius: 8px;
-    border:1px solid #c7c7c7;
-    display: inline-block;
-    padding: 3%;
-
-
-}
-
-.form-item
-{
-    margin-top: 2%; 
-}
-
 a
 {
     text-decoration: none;
+    color:#0077C5;
+}
+
+#nav-bar
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    justify-items: flex-end;
+    width:98%;
+}
+
+.column {
+    float: left;
+}
+
+.column p, .column a {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.column p {
+    color:#505050;
+}
+.column a{
+    color:#0077C5
+}
+
+.button-sign-in{
+    margin-left:10px;
+}
+
+.sign-in{
+    background: #0077C5;
+    border-radius: 4px;
+    border: 1px solid #4c4c4c;
+    padding:0 20px;
+    color:white;
+    cursor:pointer;
+    font-size:13.5px;
+    font-weight: normal;
+    height:34px;
+}
+
+.white-lock-icon{
+    height: 1em;
+    width: .8em;
+    margin-top: 2px;
+    margin-right: 4px;
+    vertical-align: text-top;
+    display: inline-block;
+    background-image: url(https://plugin.intuitcdn.net/identity-authn-core-ui/1.6.5/images/icon-whitelock@3x.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+header {
+    display:block;
+    padding: 20px 0;
+}
+
+.logo {
+    display: block;
+    margin:auto;
+    width: 118px;
+    height: 35px;
+    background-image: url(https://plugin.intuitcdn.net/identity-authn-core-ui/1.6.5/images/ecosystem_logos_new.png);
+    background-position: 0 0;
 }
 
 #main-container
 {
-    padding-top: 7%;
-
     text-align: center;
     align-items: center;
-    align-content: center;
-    
-    
+    align-content: center;  
 }
-
-
-#top-right-container1
-{
-    float: left;
-    margin-right: 10px;
-}
-
-#top-right-container2
-{
-    float: right;
-    margin-top: 10%;
-
-}
-
 
 #title
 {
     display: inline-flex;
+    margin-bottom: 15px;
+    padding-bottom: 4px;
+}
+
+.hyper-logos {
+    display: flex;
+    align-items: center;
+}
+
+.icons
+{
+    width: 37px;
+    height: 20px;
+}
+
+.mint-text{
+    background: url(https://plugin.intuitcdn.net/identity-authn-core-ui/1.6.5/images/mint-text.svg) no-repeat;
+    width: 37px;
+    height: 19px;
+}
+
+.quickbook-text{
+    background: url(https://plugin.intuitcdn.net/identity-authn-core-ui/1.6.5/images/quick-books-text.svg) no-repeat;
+    width: 98px;
+    height: 22px;
+}
+
+.turbotax-text{
+    background: url(https://plugin.intuitcdn.net/identity-authn-core-ui/1.6.5/images/turbo-tax-text.svg) no-repeat;
+    width: 74px;
+    height: 22px;
 }
 
 
+.form-container{
+    background: white;
+    border-radius: 2px;
+    border:1px solid #c7c7c7;
+    display: block;
+    width: 380px;
+    margin:auto;
+}
+
+.form-container form{
+    padding:10px
+}
+
+#fieldset1
+{
+    padding: 15px;
+    display: inline-block;
+    border:none;
+}
+
+#form-info-div {
+    padding-bottom: 20px;
+}
+
+#form-info-div h1{
+    color: #4C4C4C;
+    line-height: 1.1;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+#form-info-div p{
+    color: #4C4C4C;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.2;
+    padding-top: 20px;
+}
+
+.form-item
+{
+    position:relative;
+}
+
+.form-item label{
+    font-weight: 400;
+    color: #404040;
+    font-size: 14px;
+    line-height: 25px;
+    padding-bottom: 6px;
+    text-align: left;
+    float: left;
+}
+
+.form-item input{
+    border: 1px solid #C1C5C8;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    line-height: 21px;
+    font-size: 16px;
+    color: #000;
+    outline: 0;
+    width: 320px;
+    height:34px;
+    min-width: 160px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding-left: 8px;
+    padding-right: 6px;
+    display: block;
+}
+
+.email-status{
+    background: url(https://accounts.intuit.com/IUS-Plugins/v2/images/warning@44.png) 0 50%/22px 22px no-repeat;
+    width: 29px;
+    display: none;
+}
+
+.alert {
+    display: none; /*should be changed after alerts implementation to the "block" */
+    width:100%;
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: #eb3432;
+    word-wrap: break-word;
+}
+
+.status-password{
+    position: absolute;
+    right: 1px;
+    height: 32px;
+    top: 33px;
+    bottom: 1px;
+}
+
+#status-password{
+    background: url(https://accounts.intuit.com/IUS-Plugins/v2/images/lock-left-grey@3x.png) 0 50%/21px 21px no-repeat;
+    width: 33px;
+}
+   
+
+form button{
+    background: #0077C5;
+    border: #0077C5;
+    border-radius: 4px;
+    width: 100%;
+    height: 44px;
+    text-shadow: none;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFF;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.75);
+    min-width: 100px;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.button-submit{
+    padding-bottom:34px;
+    padding-top:20px;
+}
+
+.lock-icon{
+    height: 15.75px;
+    width: 14px;
+    margin-right: 4px;
+    vertical-align: text-top;
+    display: inline-block;
+    background-image: url(https://plugin.intuitcdn.net/identity-authn-core-ui/1.6.5/images/icon-whitelock@3x.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+footer{
+    display: block;
+}
+
+#footer-privacy{
+    padding-left:30px;
+    padding-right:30px;
+    font-style: italic;
+}
+
+#footer-captcha{
+    background-color: #eceef1;
+    padding: 16px;
+    margin-top: 32px;
+}
+
+footer span{
+    color:#757575;
+    font-size: 12px;
+    font-weight:400;
+    line-height: 18px;
+}
+
+#footer-captcha span{
+    font-style: normal;
+    font-size: 10px;
+    color: #8d9096;
+    font-weight: 400;
+}
+
+footer ul{
+    margin-bottom: 0;
+    padding:0;
+}
+
+footer ul li{
+    padding-left: 10px;
+    display: inline;
+}
+
+footer ul li a{
+    color:#505050;
+    font-size:12px;
+    font-weight:400;
+    line-height: 18px;
+}
+
+.footer-text{
+    padding-bottom: 10px;
+}
+.footer-text span{
+    color:#505050;
+    font-size:12px;
+    font-weight:400;
+    line-height: 18px;
+}
