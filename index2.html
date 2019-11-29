@@ -34,27 +34,33 @@
     <div id="main-container">
         <div id="title">
             <div class="logo-div">
-                <a class="hyper-logos" href="#">
-                    <img id="icon1" class="icons"
-                        src="https://plugin.intuitcdn.net/identity-authn-core-ui/1.6.5/images/mint-favicon.svg">
-                    <span class="mint-text icons"></span>
-                </a>
+                <div id="popup-icon" class="popup-icon-props popup-icon"></div>
             </div>
 
-            <div class="logo-div">
-                <a class="hyper-logos" href="#">
-                    <img id="icon2" class="icons"
-                        src="https://plugin.intuitcdn.net/identity-authn-core-ui/1.6.5/images/quickbooks-favicon@2x.svg">
-                    <span class="quickbook-text"></span>
-                </a>
-            </div>
+            <div id="hide-logo">
+                <div class="logo-div">
+                    <a class="hyper-logos" href="#">
+                        <img id="icon1" class="icons"
+                            src="https://plugin.intuitcdn.net/identity-authn-core-ui/1.6.5/images/mint-favicon.svg">
+                        <span class="mint-text icons"></span>
+                    </a>
+                </div>
 
-            <div class="logo-div">
-                <a class="hyper-logos" href="#">
-                    <img id="icon3" class="icons"
-                        src="https://plugin.intuitcdn.net/identity-authn-core-ui/1.6.5/images/tt-favicon@2x.svg">
-                    <span class="turbotax-text"></span>
-                </a>
+                <div class="logo-div">
+                    <a class="hyper-logos" href="#">
+                        <img id="icon2" class="icons"
+                            src="https://plugin.intuitcdn.net/identity-authn-core-ui/1.6.5/images/quickbooks-favicon@2x.svg">
+                        <span class="quickbook-text"></span>
+                    </a>
+                </div>
+
+                <div class="logo-div">
+                    <a class="hyper-logos" href="#">
+                        <img id="icon3" class="icons"
+                            src="https://plugin.intuitcdn.net/identity-authn-core-ui/1.6.5/images/tt-favicon@2x.svg">
+                        <span class="turbotax-text"></span>
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -79,7 +85,8 @@
                             <label for="email-input">
                                 Email address
                             </label><br>
-                            <input id="email-input" type="email" name="email-address" placeholder="name@domain.com">
+                            <input id="email-input" type="email" name="email-address" placeholder="name@domain.com"
+                                required="required">
                             <span class="email-status"></span>
                             <span class="alert" for="email-input" aria-live="assertive" role="alert">Please enter a
                                 valid email address.</span>
@@ -89,7 +96,8 @@
                             <label>
                                 Phone (recommended)
                             </label><br>
-                            <input id="phone-input" type="tel" name="phone-number" placeholder="Your phone here">
+                            <input id="phone-input" type="tel" name="phone-number" placeholder="Your phone here"
+                                required="required">
                             <span class="alert" for="phone-input" aria-live="assertive" role="alert">We strongly
                                 recommend adding a phone number. This will help verify your account and keep it
                                 safe.</span>
@@ -99,7 +107,7 @@
                             <label>
                                 Password
                             </label><br>
-                            <input id="password-input" type="password" name="password">
+                            <input id="password-input" type="password" name="password" required="required">
                             <span id="status-password" class="status-password" aria-live="polite"></span>
                         </div>
 
@@ -107,7 +115,7 @@
                             <label>
                                 Confirm Password
                             </label><br>
-                            <input type="password" name="password">
+                            <input type="password" name="password" required="required">
                         </div>
 
                         <div class="form-item button-submit">
@@ -176,6 +184,15 @@
             </span>
         </div>
     </footer>
-</body>
 
+    <script>
+        var myBox = document.getElementById('popup-icon');
+        var logo = document.getElementById('hide-logo');
+        myBox.addEventListener('webkitAnimationEnd',
+            function (event) {
+                myBox.style.display = 'none';
+                logo.style.display = 'flex' ;
+            }, false);
+    </script>
+</body>
 </html>

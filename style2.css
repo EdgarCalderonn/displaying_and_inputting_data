@@ -199,6 +199,11 @@ header {
     display: block;
 }
 
+.form-item input:focus {
+    box-shadow: 0 0 5px rgba(0, 119, 197, .5);
+    border: 1px solid rgba(0, 119, 197, .3);
+}
+
 .email-status{
     background: url(https://accounts.intuit.com/IUS-Plugins/v2/images/warning@44.png) 0 50%/22px 22px no-repeat;
     width: 29px;
@@ -318,4 +323,35 @@ footer ul li a{
     font-size:12px;
     font-weight:400;
     line-height: 18px;
+}
+
+.popup-icon-props{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 108px;
+    margin: auto;
+    height: 46px;
+    width: 46px;
+    animation: 1.4s zoom ease-in-out forwards;
+    animation-fill-mode: forwards;
+}
+
+.popup-icon{
+    background: url(https://plugin.intuitcdn.net/identity-authn-core-ui/1.6.5/images/mint-favicon.svg) no-repeat;
+}
+
+#hide-logo {
+    display: none;
+}
+
+/* Animation */
+@keyframes zoom {
+0%, 100% {
+    transform: scale(.5,.5);
+}
+
+50% {
+    transform: scale(1,1);
+}
 }
