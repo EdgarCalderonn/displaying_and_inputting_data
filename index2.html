@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-
-    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Intuit Accounts - Sign Up</title>
     <link rel="stylesheet" href="style2.css">
-
 </head>
 
 <body>
@@ -40,7 +41,7 @@
             <div id="hide-logo">
                 <div class="logo-div">
                     <a class="hyper-logos" href="#">
-                        <img id="icon1" class="icons"
+                        <img id="icon1" class="icons" alt="icon"
                             src="https://plugin.intuitcdn.net/identity-authn-core-ui/1.6.5/images/mint-favicon.svg">
                         <span class="mint-text icons"></span>
                     </a>
@@ -48,7 +49,7 @@
 
                 <div class="logo-div">
                     <a class="hyper-logos" href="#">
-                        <img id="icon2" class="icons"
+                        <img id="icon2" class="icons" alt="icon"
                             src="https://plugin.intuitcdn.net/identity-authn-core-ui/1.6.5/images/quickbooks-favicon@2x.svg">
                         <span class="quickbook-text"></span>
                     </a>
@@ -56,7 +57,7 @@
 
                 <div class="logo-div">
                     <a class="hyper-logos" href="#">
-                        <img id="icon3" class="icons"
+                        <img id="icon3" class="icons" alt="icon"
                             src="https://plugin.intuitcdn.net/identity-authn-core-ui/1.6.5/images/tt-favicon@2x.svg">
                         <span class="turbotax-text"></span>
                     </a>
@@ -88,7 +89,7 @@
                             <input id="email-input" type="email" name="email-address" placeholder="name@domain.com"
                                 required="required">
                             <span class="email-status"></span>
-                            <span class="alert" for="email-input" aria-live="assertive" role="alert">Please enter a
+                            <span class="alert" rel="email-input" aria-live="assertive" role="alert">Please enter a
                                 valid email address.</span>
                         </div>
 
@@ -98,7 +99,7 @@
                             </label><br>
                             <input id="phone-input" type="tel" name="phone-number" placeholder="Your phone here"
                                 required="required">
-                            <span class="alert" for="phone-input" aria-live="assertive" role="alert">We strongly
+                            <span class="alert" rel="phone-input" aria-live="assertive" role="alert">We strongly
                                 recommend adding a phone number. This will help verify your account and keep it
                                 safe.</span>
                         </div>
@@ -120,7 +121,7 @@
 
                         <div class="form-item button-submit">
                             <button name="submit">
-                                <span id="" class="lock-icon"></span>
+                                <span class="lock-icon"></span>
                                 Create Account
                             </button>
                         </div>
@@ -191,8 +192,9 @@
         myBox.addEventListener('webkitAnimationEnd',
             function (event) {
                 myBox.style.display = 'none';
-                logo.style.display = 'flex' ;
+                logo.style.display = 'flex';
             }, false);
     </script>
 </body>
+
 </html>
